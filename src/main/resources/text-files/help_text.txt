@@ -1,0 +1,11 @@
+'/start' --> Get starting bot
+
+'/viewTree' --> Get category tree
+
+'/addElement <category name>' --> Add new category
+
+'/addElement <parent category name> <child category name>' --> Add new category to the existing one
+
+'/removeElement <category name>' --> Delete the given category and all its subcategories
+
+'/help' --> Get commands list
