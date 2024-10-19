@@ -3,6 +3,7 @@ package org.test.testpanproject.command;
 import org.test.testpanproject.exception.CategoriesListEmptyException;
 import org.test.testpanproject.service.BotService;
 
+// Класс-команда по получению дерева категорий
 public class GetCategoriesCommand implements Command{
 
     private final BotService botService;
@@ -11,6 +12,7 @@ public class GetCategoriesCommand implements Command{
         this.botService = botService;
     }
 
+    // Логика по дообработке команды и работе с классом-сервисом
     @Override
     public String execute(String commandText) {
         try {

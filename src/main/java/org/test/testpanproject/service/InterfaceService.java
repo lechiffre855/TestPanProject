@@ -6,15 +6,13 @@ import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
+// Класс-сервис по вспомогательной работе с пользовательским интерфейсом бота
 @Service
 public class InterfaceService {
     public SetMyCommands getMenuCommands(){
@@ -27,7 +25,7 @@ public class InterfaceService {
 
         return new SetMyCommands(listCommands, new BotCommandScopeDefault(), null);
     }
-    public String getCommandsDescription(){
+    public String getAllCommandsDescription(){
         ClassPathResource classPathResource = new ClassPathResource("text-files/help_text.txt");
         try(InputStream inputStream = classPathResource.getInputStream()) {
             return new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);

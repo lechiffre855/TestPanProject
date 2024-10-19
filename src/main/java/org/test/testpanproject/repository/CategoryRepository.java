@@ -6,8 +6,8 @@ import org.test.testpanproject.entity.Category;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
+// Интерфейс по работе с БД с помощью паттерна спринга "репозиторий"
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     Optional<Category> findByName(String name);

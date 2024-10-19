@@ -62,7 +62,7 @@ public class Bot extends TelegramLongPollingBot {
             sendMessageText = "Hello user!\n" + "I'm telegram category tree bot.";
         }
         else if (receivedMessageText.equals("/help"))
-            sendMessageText = interfaceService.getCommandsDescription();
+            sendMessageText = interfaceService.getAllCommandsDescription();
         else if (receivedMessageText.equals("/viewTree"))
             sendMessageText = commandProcessor.getCategoriesTree();
         else if (receivedMessageText.startsWith("/addElement"))

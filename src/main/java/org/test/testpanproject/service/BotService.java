@@ -10,6 +10,7 @@ import org.test.testpanproject.repository.CategoryRepository;
 import java.util.List;
 import java.util.Optional;
 
+// Класс сервис по работе с сущностями и БД
 @Service
 public class BotService {
     private final CategoryRepository categoryRepository;

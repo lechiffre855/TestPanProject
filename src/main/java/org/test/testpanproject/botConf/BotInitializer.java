@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import org.test.testpanproject.Bot;
 
+// класс с реализацией инициализации бота в телеграм-апи
 @Component
 public class BotInitializer {
     private final Bot bot;
@@ -16,9 +17,11 @@ public class BotInitializer {
         this.bot = bot;
     }
 
+    // Инициализация бота после сборки контекста спринга
     @EventListener({ContextRefreshedEvent.class})
     public void toRegisterBot() throws TelegramApiException {
-        TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-        botsApi.registerBot(bot);
+        TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class); /* Передаем класс DefaultBotSession.class
+        для работы с ботом в режиме Long Polling */
+        botsApi.registerBot(bot); // регистрируем класс бота в телеграм-апи
     }
 }

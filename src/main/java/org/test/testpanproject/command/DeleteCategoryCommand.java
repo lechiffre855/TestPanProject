@@ -5,6 +5,7 @@ import org.test.testpanproject.service.BotService;
 
 import java.util.regex.PatternSyntaxException;
 
+// Класс-команда по удаления категории
 public class DeleteCategoryCommand implements Command{
 
     private final BotService botService;
@@ -13,6 +14,7 @@ public class DeleteCategoryCommand implements Command{
         this.botService = botService;
     }
 
+    // Логика по дообработке команды и работе с классом-сервисом
     @Override
     public String execute(String commandText) {
         String rightFormatMessage = "You need to write in this format: \n'/removeElement <category>'";

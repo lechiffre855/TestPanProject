@@ -8,6 +8,7 @@ import org.test.testpanproject.service.BotService;
 
 import java.util.regex.PatternSyntaxException;
 
+// Класс-команда по добавлению категории
 public class AddCategoryCommand implements Command{
 
     private final BotService botService;
@@ -16,6 +17,7 @@ public class AddCategoryCommand implements Command{
         this.botService = botService;
     }
 
+    // Логика по дообработке команды и работе с классом-сервисом
     @Override
     public String execute(String commandText) {
         String rightFormatMessage = "You need to write in this format: \n'/addElement <parent category> <child category>'";
